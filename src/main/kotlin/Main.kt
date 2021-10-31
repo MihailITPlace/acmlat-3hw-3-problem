@@ -32,7 +32,7 @@ fun main() {
 }
 
 fun addClausesForVertex(solver: Solver, colorCount: Int, vertexNumber: Int) {
-    if (vertexNumber < 2) throw IllegalArgumentException("Номер вершины должен быть больше 2")
+    if (vertexNumber < 2) throw IllegalArgumentException("Номер вершины должен быть >= 2")
 
     // добавляем по ребру к каждой из существующих вершин
     val newEdgesCount = vertexNumber - 1
