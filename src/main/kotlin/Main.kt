@@ -44,10 +44,10 @@ fun addClausesForVertex(solver: Solver, colorCount: Int, vertexNumber: Int) {
     addEdgesAdjacencyClauses(solver, vertexNumber)
 }
 
-// накладываем ограничение, что ребро может быть окрашено только в один цвет
 fun addUniqColorClauses(solver: Solver, vertexNumber: Int) {
     for (i in 1 until vertexNumber) {
         val edge = edges[edges.size - i]
+        // накладываем ограничение, что ребро может быть окрашено только в один цвет
         solver.exactlyOne(edge)
     }
 }
